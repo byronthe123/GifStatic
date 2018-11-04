@@ -1,5 +1,10 @@
+const root = document.getElementsByTagName( 'html' )[0];
+
 $(document).ready(function(){
     console.log('js online');
+
+    // root.setAttribute('class', 'bg1');
+    $('body').addClass('bg1');
     
     let topics = ['Favorites','Deus Ex', 'The Witcher 3', 'Shadow of the Colossus'];
 
@@ -36,6 +41,7 @@ $(document).ready(function(){
         // $('#div_gifs').append(`<img src='${response.data[0].images.fixed_height.url}'>`);
         // $('#div_gifs').append(`<img static='${response.data[0].images.downsized_still.url}' animation='${response.data[0].images.downsized.url}' src='${response.data[0].images.downsized_still.url}'>`);
         $('body').removeClass('bg1').addClass('bg2');
+        // root.setAttribute('background', `url('../images/background2.jpg') no-repeat center center fixed`);
 
         // $('#div_gifs').empty();
 
@@ -91,6 +97,7 @@ $(document).ready(function(){
         if(favorites_array.length < 2) {
             alert('No favorites added!\nClick the star to add to favorites.');
         } else {
+            $('body').removeClass('bg1').addClass('bg2');
             $('#div_favorites').empty();
             $('#div_favorites').show();
             $('#div_gifs').hide();
