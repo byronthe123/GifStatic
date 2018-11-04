@@ -1,7 +1,6 @@
 $('body').addClass('bg1');
 
 $(document).ready(function(){
-    console.log('js online');
 
     // root.setAttribute('class', 'bg1');
     
@@ -31,7 +30,7 @@ $(document).ready(function(){
             url: queryURL,
             method: 'GET'
         }).then(function(response){
-            console.log(response);
+            // console.log(response);
             displayGif(response);
         });
     }
