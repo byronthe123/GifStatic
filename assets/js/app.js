@@ -1,10 +1,9 @@
-const root = document.getElementsByTagName( 'html' )[0];
+$('body').addClass('bg1');
 
 $(document).ready(function(){
     console.log('js online');
 
     // root.setAttribute('class', 'bg1');
-    $('body').addClass('bg1');
     
     let topics = ['Favorites','Deus Ex', 'The Witcher 3', 'Shadow of the Colossus'];
 
