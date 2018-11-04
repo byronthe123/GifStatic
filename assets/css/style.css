@@ -1,0 +1,54 @@
+* {
+    /* border: 0.2px red solid; */
+    font-family: 'Audiowide', cursive;
+}
+
+body {
+    /* background-image: url('../images/background.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg1 {
+    background-image: url('../images/background.jpg');
+}
+
+.bg2 {
+    background-image: url('../images/background2.jpg');
+}
+
+.div_gif {
+    position: relative;
+}
+
+.div_gif:hover .add_favorite {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+.add_favorite {
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    color: yellow;
+    font-size:300%;
+    position: absolute;
+}
+
+.unfavorite {
+    opacity: 1;
+    font-size:300%;
+    color: red;
+    position: absolute;
+}
+
+/* .rating {
+    position: aboslute;
+} */
+
+@media (min-width: 992px) {
+    #div_form {
+        top: 50%;
+        right: 0;
+        position: fixed;
+    }
+}
