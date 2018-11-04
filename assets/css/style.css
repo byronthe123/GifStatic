@@ -34,6 +34,10 @@ body {
     position: absolute;
 }
 
+.add_favorite:hover {
+    cursor: pointer;
+}
+
 .unfavorite {
     opacity: 1;
     font-size:300%;
@@ -41,9 +45,13 @@ body {
     position: absolute;
 }
 
-/* .rating {
-    position: aboslute;
-} */
+.unfavorite:hover {
+    cursor: pointer;
+}
+
+.rating {
+    color: white;
+}
 
 @media (min-width: 992px) {
     #div_form {
