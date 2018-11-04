@@ -54,7 +54,6 @@ $(document).ready(function(){
                 `);
             }
         }
-
         window.scrollTo(0, document.body.scrollHeight);
     }
 
@@ -116,9 +115,9 @@ $(document).ready(function(){
 
     //Click on the Favorite link on a Gif:
     $(document).on('click', '.add_favorite', function() {
-        console.log($(this));
+        // console.log($(this));
         // console.log($(this).parent().addClass('unfavorite'));
-        console.log($(this).parent());
+        // console.log($(this).parent());
         // console.log($(this).parent()[0].outerHTML);
         $(this).removeClass('add_favorite').addClass('unfavorite');
         if(favorites_array.indexOf(i => i.val === $(this).parent()[0].outerHTML) === -1) {
@@ -128,14 +127,13 @@ $(document).ready(function(){
     });
 
     $(document).on('click', '.unfavorite', function() {
-        console.log($(this).parent());
+        // console.log($(this).parent());
         $(this).removeClass('unfavorite').addClass('add_favorite');
         favorites_array.splice(favorites_array.indexOf(i => i.val === $(this).parent()[0].outerHTML), 1);
         localStorage.setItem('favorites', favorites_array);
         if(in_favorite) {
             $(this).parent().remove();
         }
-        // $(this).html(`<span class='add_favorite' style="font-size:300%;color:yellow;">&starf;</span>`);
     });
 
     //Click on submit button to create a new topic button:
@@ -149,9 +147,5 @@ $(document).ready(function(){
             alert('Please enter a topic!');
         }
     });
-
-    // console.log(localStorage.getItem('favorites'));
-    let array1 = [1,2,3];
-    // console.log(Array.isArray(array1));
 });
 
